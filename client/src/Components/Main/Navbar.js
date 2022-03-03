@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
+import Logo from '../../Assets/logo.png';
 import {FaHamburger} from 'react-icons/fa';
 import {FaWindowClose} from "react-icons/fa";
 // Se puede usar IconContext para dar estilo global a todos los iconos
@@ -18,7 +19,7 @@ const Navbar = () => {
                 <span className='sr-only'></span>
             </button>
             <nav className='navbar'>
-                <p className='logo animate__animated animate__flipInY'>EOLIA NEXUS</p>
+                <img src={ Logo } alt='eolia nexus logo' className='logo rotating'/>
                 <ul id='primary-navigation' data-visible='false' className={isMobile ? 'primary-navigation flex mobile' : 'primary-navigation flex'} onClick={() => setIsMobile(true)}>
                     <li className='active'>
                         <Link activeClass="active" to="home-page" spy={true} 

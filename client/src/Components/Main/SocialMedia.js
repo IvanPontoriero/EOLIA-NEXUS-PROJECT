@@ -6,7 +6,7 @@ import { FaInstagram } from 'react-icons/fa';
 const SocialMedia = () => {
     return (
         <div className='social-media'>
-            <ul className='icons'>
+            <ul className='icons column'>
                 <li className='icon'>
                     <Link to={{ pathname: "https://discord.gg/kpFYAB2Q" }} target="_blank">
                         <FaDiscord />

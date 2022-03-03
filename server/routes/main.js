@@ -1,9 +1,9 @@
 const { Router } = require('express')
-const path = require('path');
+const App = require('../../client/src/App')
 const router = Router();
 
 router.get('/', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, '../../client/public/index.html'));
+    res.render(App);
 });
 
 module.exports = router;

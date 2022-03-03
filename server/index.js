@@ -19,9 +19,9 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const express = require('express');
 const app = express();
-const routes = require('./routes/main'); // rutas
-const path = require('path');
+const route = require('./routes/main'); // rutas
 const bodyParser = require('body-parser');
+const App = require('../client/src/App')
 // Creamos el puerto
 const PORT = process.env.PORT || 8080;
 
@@ -38,11 +38,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// app.use('/', routes);
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/public/index.html'));
-})
+app.use('/', route)
 
 app.use((err, req, res, next) => {
     const status = err.status || 500;

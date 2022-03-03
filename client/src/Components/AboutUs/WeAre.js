@@ -16,6 +16,7 @@ const WeAre = () => {
                     </div>
                 </div>   
             </section>
+            <div className='transition-bottom'></div>
         </div>
     )
 }

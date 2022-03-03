@@ -10,91 +10,105 @@ body {
 
 .about-us {
     margin: 0;
-    background: url(../../Assets/pintor-cropped.jpg);
+    background: url(../../Assets/pintor.jpg);
     background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.transition {
+    margin: 0;
+    padding: 0;
+    background: #030303;
+    width: 100vw;
+    height: 25vh;
+    margin-bottom: -15vh;
+    transform: translateY(-.5px);
+    clip-path: polygon(0 0, 100% 0, 100% 61%, 34% 31%, 71% 32%);
+}
+
+.transition-bottom {
+    margin: 0;
+    padding: 0;
+    background-image: url(../../Assets/eolia_background.png);
+    width: 100vw;
+    height: 25vh;
+    margin-top: -24.9vh;
+    bottom: 0;
+    clip-path: polygon(0 100%, 100% 100%, 40% 85%, 73% 84%, 0 61%);
 }
 
 .about-us2 {
     height: 100vh;
     margin: 0;
-    background: url(../../Assets/monkey-cropped.jpg);
+    background: url(../../Assets/autos.jpg);
     background-repeat: no-repeat;
-    border-top: 1px solid #D9D9D9;
-    box-shadow: 0 0 15px #9600B3, 0 0 30px #d9d9d9;
+    background-position: bottom left;
 }
 
 .au-section {
     display: flex;
     position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.au-title {
+    margin: 0;
+    color: #D9D9D9;
+    font-size: 3rem;
+    padding-inline-start: 5rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    text-shadow: 0 0 .25em #222222, 0 0 .25em yellow;
+}
+
+.text-bg {
+    width: 100vw;
+}
+
+.text-bg2 {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
 }
 
 .right {
     justify-content: flex-end;
 }
 
-.text-bg {
-    width: 85vw;
-    background-image: url(../../Assets/eolia_background.png);
-    clip-path: polygon(60% 0, 100% 21%, 86% 42%, 100% 66%, 86% 80%, 93% 100%, 0 100%, 0 0);
-    padding-inline-start: 2rem;
-    margin-top: 6rem;
-}
-
-.text-bg2 {
-    height: 101vh;
-    width: 100vw;
-    background-image: url(../../Assets/eolia_background.png);
-    clip-path: polygon(24% 18%, 10% 0, 100% 0, 100% 70%, 100% 100%, 14% 100%, 26% 83%, 11% 67%, 18% 51%, 1% 34%);
-}
-
 .au-text {
     width: 70vw;
     margin: 0;
     padding: 1.5rem 0;
-    font-size: 2rem;
+    padding-inline-start: 2rem;
+    font-size: 1.8rem;
     letter-spacing: .01em;
     color: #D9D9D9;
-    text-shadow: 0 0 .25em #222222, 0 0 .7em #D9D9D9;
+    text-shadow: 0 0 .5em #222222, 0 0 .7em #D9D9D9;
+    text-indent: 2em;
+    
 }
 
 .au-text2 {
     width: 60vw;
     margin: 0;
-    margin-left: 8rem;
-    padding-top: 1.5rem;
-    font-size: 1.33rem;
+    /* margin-left: 8rem; */
+    padding-top: 5em;
+    padding-right: 2em;;
+    font-size: 1.11rem;
     letter-spacing: .01em;
     color: #D9D9D9;
-    text-shadow: 0 0 .25em #222222, 0 0 .7em #D9D9D9;
+    text-shadow: 0 0 .5em #222222, 0 0 .7em #D9D9D9;
+    text-indent: 2em;
 }
 
 .text-container {
     width: 70vw;
 }
 
-.custom-shape-divider-top-1645938824 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1645938824 svg {
-    position: relative;
-    display: block;
-    width: calc(127% + 1.3px);
-    height: 100px;
-}
-
-.custom-shape-divider-top-1645938824 .shape-fill {
-    fill: #0b0b0b;
-}
-
 .members {
     margin: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 10;
 }
 
@@ -103,76 +117,131 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    /* padding-inline-end: 5rem; */
 }
 
-.icons {
-    margin: 1rem 0;
-    padding: 0;
-    padding-bottom: 2.5rem;
+.list-members {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
     font-size: 1.5rem;
     list-style: none;
     text-decoration: none;
 }
 
-.icons a {
+.list-members a {
     color: #FFFFFF;
+    text-shadow: 0 0 10px #d9d9d9;
     text-decoration: none;
+}
+
+.list-members a:hover {
+    color: #9600B3;
 }
 
 .icon {
     margin: .5rem;
+    margin-top: 0;
     background: hsl(0 0% 100% / .1);
     backdrop-filter: blur(1rem);
-    border-radius: 10px;  
+    border-radius: 0 0 20px 0;  
+    border: 2px solid yellowgreen;
+    box-shadow: inset 0 0 10px yellowgreen;
 }
 
 .icon a {
     padding: .5rem;
 }
 
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-name {
+    cursor: pointer;
+    color: #d9d9d9;
+    padding: 1em;
+    text-shadow:0 0 .25em #d9d9d9, 0 0 .5em #222222;
+    font-size: .8rem;
+    background: transparent;
+    z-index: 20;
+    transform: translateY(100px);
+    transition: transform 5000ms;
+}
+
+.member-name:hover {
+    transform: translateY(0px);
+}
+
+.middle-transition-top {
+    margin: 0;
+    padding: 0;
+    background: rgb(34,34,34);
+    background: linear-gradient(180deg, #0b0b0b 0%, rgba(87, 87, 87, 0.61) 40%, rgba(106,106,106,0) 100%);
+    width: 100vw;
+    height: 20vh;
+    margin-bottom: -20vh;
+    clip-path: polygon(0 0, 100% 0, 100% 61%, 34% 31%, 71% 32%);
+}
+
+.middle-transition-bottom {
+    margin: 0;
+    padding: 0;
+    background: rgb(34,34,34);
+    background: linear-gradient(0deg, #0b0b0b 0%, rgba(87, 87, 87, 0.61) 40%, rgba(106,106,106,0) 100%);
+    width: 100vw;
+    height: 25vh;
+    clip-path: polygon(0 100%, 100% 100%, 40% 85%, 73% 84%, 0 61%);
+}
+
 @media screen and (min-width: 768px) {
     .au-text {
         font-size: 2.3rem;
     }
-    .text-bg {
-        width: 80vw;
-        height: 50vh;
-    }
-    .text-bg2 {
-        width: 80vw;
-    }
+
     .au-text2 {
         width: 50vw;
         margin: 0;
-        margin-left: 12rem;
+        /* margin-left: 12rem; */
         padding-top: 3rem;
         font-size: 1.7rem;
+    }
+
+    .transition {
+        background-image: url(../../Assets/concept768.png);
     }
 }
 
 @media screen and (min-width: 1024px) {
+    .au-title {
+        font-size: 4rem;
+    }
+
     .au-text {
         width: 50vw;
         margin: 0;
-        padding-top: 3.5rem;
+        padding: 2rem 0; /*3.5*/
         padding-inline-start: 3rem;
         font-size: 3rem;
-    }
-
-    .text-bg {
-        width: 70vw;
-        height: 60vh
-    }
-
-    .text-bg2 {
-        width: 70vw;
     }
     
     .au-text2 {
         width: 40vw;
         margin: 0;
-        margin-left: 21rem;
-        padding-top: 4rem;
-        font-size: 2.1rem;
+        /* margin-left: 20rem; */
+        padding-top: 6rem;
+        padding-right: 3em;
+        font-size: 2rem;
+    }
+
+    .list-members {
+        justify-content: flex-end;
+        font-size: 2.5rem;
+        padding: 0 3rem 2.5rem 0;
+    }
+
+    .transition {
+        background-image: url(../../Assets/eolia_background.png);
     }
 }
