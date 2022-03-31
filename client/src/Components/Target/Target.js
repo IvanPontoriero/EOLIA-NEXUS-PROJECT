@@ -3,8 +3,8 @@ import './target.css';
 
 const Target = () => {
     return (
-        <div className='target'>
-            <h1 className='target-title'> CURRENT TARGET </h1>
+        <div className='target' id='roadmap'>
+            <h1 className='target-title'> ROADMAP </h1>
             <Roadmap />
         </div>
     )

@@ -10,43 +10,49 @@ body {
 
 .about-us {
     margin: 0;
-    background: url(../../Assets/pintor.jpg);
+    /* height: 100vh; */
+    background: url(../../Assets/eolia_background.png);
     background-repeat: no-repeat;
-    background-position: top right;
 }
 
-.transition {
-    margin: 0;
-    padding: 0;
-    background: #030303;
-    width: 100vw;
-    height: 25vh;
-    margin-bottom: -15vh;
-    transform: translateY(-.5px);
-    clip-path: polygon(0 0, 100% 0, 100% 61%, 34% 31%, 71% 32%);
+.robotbug-container {
+    position: absolute;
+    top: 92%;
+    right: 5%;
+    z-index: 1;
 }
 
-.transition-bottom {
-    margin: 0;
-    padding: 0;
-    background-image: url(../../Assets/eolia_background.png);
-    width: 100vw;
-    height: 25vh;
-    margin-top: -24.9vh;
-    bottom: 0;
-    clip-path: polygon(0 100%, 100% 100%, 40% 85%, 73% 84%, 0 61%);
+.purplecar-container {
+    position: absolute;
+    top: 0%;
+    right: 0%;
 }
+
+.graffiti-container {
+    position: absolute;
+    top: 62%;
+    left: -60%;
+}
+
+.robotbug {
+    width: 50vw;
+}
+
+ .graffiti {
+    width: 80%;
+    transform: rotateZ(30deg);
+ }
 
 .about-us2 {
     height: 100vh;
     margin: 0;
-    background: url(../../Assets/autos.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom left;
+    background: url(../../Assets/eolia_background.png);
 }
 
 .au-section {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -56,20 +62,32 @@ body {
     margin: 0;
     color: #D9D9D9;
     font-size: 3rem;
-    padding-inline-start: 5rem;
-    padding: 1.5rem 0;
+    /* padding-inline-start: 5rem; */
+    padding-top: 1.5rem;
     text-align: center;
     text-shadow: 0 0 .25em #222222, 0 0 .25em yellow;
 }
 
 .text-bg {
-    width: 100vw;
+    width: 70vw;
+    margin-inline-start: 2em;
+    background: hsla(166, 38%, 11%, 0.55);
+    backdrop-filter: blur(1rem);
+    z-index: 10;
+    clip-path: polygon(100% 0, 100% 75%, 76% 100%, 0 100%, 0 7%, 25% 7%, 30% 0);
 }
 
 .text-bg2 {
     display: flex;
-    justify-content: flex-end;
-    width: 100vw;
+    justify-content: center;
+    position: absolute;
+    width: 80vw;
+    right: 10%;
+    top: 15%;
+    background: hsla(166, 38%, 11%, 0.55);
+    backdrop-filter: blur(1rem);
+    z-index: 10;
+    clip-path: polygon(100% 0, 100% 75%, 76% 100%, 0 100%, 0 7%, 25% 7%, 30% 0);
 }
 
 .right {
@@ -77,13 +95,13 @@ body {
 }
 
 .au-text {
-    width: 70vw;
+    width: 50vw;
     margin: 0;
-    padding: 1.5rem 0;
-    padding-inline-start: 2rem;
-    font-size: 1.8rem;
+    padding-block: 1.5em;
+    padding-inline-start: 1em;
+    font-size: 1.3rem;
     letter-spacing: .01em;
-    color: #D9D9D9;
+    color: #e0fdf3;
     text-shadow: 0 0 .5em #222222, 0 0 .7em #D9D9D9;
     text-indent: 2em;
     
@@ -92,12 +110,10 @@ body {
 .au-text2 {
     width: 60vw;
     margin: 0;
-    /* margin-left: 8rem; */
-    padding-top: 5em;
-    padding-right: 2em;;
     font-size: 1.11rem;
     letter-spacing: .01em;
-    color: #D9D9D9;
+    margin-top: 2em;
+    color: #e0fdf3;
     text-shadow: 0 0 .5em #222222, 0 0 .7em #D9D9D9;
     text-indent: 2em;
 }
@@ -121,6 +137,9 @@ body {
 }
 
 .list-members {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
     margin-top: -1rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -135,21 +154,7 @@ body {
 }
 
 .list-members a:hover {
-    color: #9600B3;
-}
-
-.icon {
-    margin: .5rem;
-    margin-top: 0;
-    background: hsl(0 0% 100% / .1);
-    backdrop-filter: blur(1rem);
-    border-radius: 0 0 20px 0;  
-    border: 2px solid yellowgreen;
-    box-shadow: inset 0 0 10px yellowgreen;
-}
-
-.icon a {
-    padding: .5rem;
+    color: yellowgreen;
 }
 
 .icon-container {
@@ -158,20 +163,36 @@ body {
     align-items: center;
 }
 
-.member-name {
-    cursor: pointer;
-    color: #d9d9d9;
-    padding: 1em;
-    text-shadow:0 0 .25em #d9d9d9, 0 0 .5em #222222;
-    font-size: .8rem;
-    background: transparent;
-    z-index: 20;
-    transform: translateY(100px);
-    transition: transform 5000ms;
+.member {
+    margin: .5rem;
+    margin-top: 0;
+    background: hsl(0 0% 100% / .1);
+    backdrop-filter: blur(1rem);
+    border-radius: 0 0 25% 0;  
+    border: 2px solid yellowgreen;
+    box-shadow: inset 0 0 25% yellowgreen;
+    clip-path: polygon(100% 0, 100% 75%, 75% 100%, 7% 100%, 7% 75%, 0 75%, 0 0);
 }
 
-.member-name:hover {
-    transform: translateY(0px);
+.member a {
+    padding: .7rem;
+}
+
+
+.member-name {
+    cursor: pointer;
+    color: #ffffff;
+    padding: 1em;
+    text-shadow: 0 0 .5em #222222;
+    font-size: .5rem;
+    letter-spacing: .1em;
+    background: transparent;
+    z-index: 20;
+    transform: translateY(50px);
+}
+
+.member-icon {
+    width: 50px;
 }
 
 .middle-transition-top {
@@ -181,7 +202,7 @@ body {
     background: linear-gradient(180deg, #0b0b0b 0%, rgba(87, 87, 87, 0.61) 40%, rgba(106,106,106,0) 100%);
     width: 100vw;
     height: 20vh;
-    margin-bottom: -20vh;
+    margin-bottom: -22.5vh;
     clip-path: polygon(0 0, 100% 0, 100% 61%, 34% 31%, 71% 32%);
 }
 
@@ -196,6 +217,47 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+    .robotbug-container {
+        display: none;
+    }
+
+    .purplecar-container {
+        display: none;
+    }
+
+    .transition {
+        margin: 0;
+        padding: 0;
+        background-image: url(../../Assets/concept768.png);
+        width: 100vw;
+        height: 25vh;
+        margin-bottom: -15vh;
+        transform: translateY(-.5px);
+        clip-path: polygon(0 0, 100% 0, 100% 61%, 34% 31%, 71% 32%);
+    }
+
+    .transition-bottom {
+        margin: 0;
+        padding: 0;
+        background-image: url(../../Assets/eolia_background.png);
+        width: 100vw;
+        height: 25vh;
+        margin-top: -24.9vh;
+        bottom: 0;
+        clip-path: polygon(0 100%, 100% 100%, 40% 85%, 73% 84%, 0 61%);
+    }
+
+    .about-us {
+        background: url(../../Assets/pintor.jpg);
+        background-position: top right;
+    }
+
+    .about-us2 {
+        background: url(../../Assets/autos.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+
     .au-text {
         font-size: 2.3rem;
     }
@@ -203,36 +265,72 @@ body {
     .au-text2 {
         width: 50vw;
         margin: 0;
-        /* margin-left: 12rem; */
         padding-top: 3rem;
-        font-size: 1.7rem;
+        margin-inline-end: 2em;
+        font-size: 1.5rem;
     }
 
-    .transition {
-        background-image: url(../../Assets/concept768.png);
+    .text-bg2 {
+        width: 60vw;
+        top: 12%;
+    }
+
+    .member {
+        font-size: 2rem;
+    }
+
+    .member a {
+        padding: 1rem;
+    }
+
+    .member-name {
+        font-size: .8rem;
+        transform: translateY(70px);
     }
 }
 
 @media screen and (min-width: 1024px) {
     .au-title {
+        padding-top: 1em;
         font-size: 4rem;
     }
 
-    .au-text {
+    .text-bg {
         width: 50vw;
+        margin-inline-start: 2.5em;
+    }
+
+    .text-bg2 {
+        height: 70vh;
+        width: 50vw;
+    }
+
+    .au-text {
+        width: 45vw;
         margin: 0;
-        padding: 2rem 0; /*3.5*/
-        padding-inline-start: 3rem;
-        font-size: 3rem;
+        padding-block-start: 1em;
+        padding-inline-start: 1em;
+        font-size: 2rem;
     }
     
     .au-text2 {
         width: 40vw;
         margin: 0;
-        /* margin-left: 20rem; */
-        padding-top: 6rem;
-        padding-right: 3em;
-        font-size: 2rem;
+        padding-inline-end: 3em;
+        font-size: 1.8rem;
+    }
+
+    .member {
+        padding: .2em;
+    }
+
+    .member-name {
+        font-size: 1rem;
+        transform: translateY(6em);
+    }
+
+    .member-name:hover {
+        transform: scale(2)
     }
 
     .list-members {

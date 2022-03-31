@@ -21,13 +21,13 @@ const Navbar = () => {
             <nav className='navbar'>
                 <img src={ Logo } alt='eolia nexus logo' className='logo rotating'/>
                 <ul id='primary-navigation' data-visible='false' className={isMobile ? 'primary-navigation flex mobile' : 'primary-navigation flex'} onClick={() => setIsMobile(true)}>
-                    <li className='active'>
+                    {/* <li>
                         <Link activeClass="active" to="home-page" spy={true} 
                         smooth={true} offset={0} duration={500} >
                             <span aria-hidden='true'>00 </span>
                                 HOME
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link activeClass="active" to="about-us" spy={true} 
                         smooth={true} offset={0} duration={500}>
@@ -36,10 +36,24 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link activeClass="active" to="whitepaper" spy={true} 
+                        <Link activeClass="active" to="roadmap" spy={true} 
                         smooth={true} offset={0} duration={500}>
                             <span aria-hidden='true'>02 </span>
-                                WHITEPAPER
+                                ROADMAP
+                        </Link>
+                    </li>
+                    <li>
+                        <Link activeClass="active" to="faq" spy={true} 
+                        smooth={true} offset={0} duration={500}>
+                            <span aria-hidden='true'>03 </span>
+                                F.A.Q.
+                        </Link>
+                    </li>
+                    <li>
+                        <Link activeClass="active" to="learn-more" spy={true} 
+                        smooth={true} offset={0} duration={500}>
+                            <span aria-hidden='true'>04 </span>
+                                LEARN MORE
                         </Link>
                     </li>
                 </ul>

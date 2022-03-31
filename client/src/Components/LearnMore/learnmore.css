@@ -11,7 +11,7 @@ body {
 .learn-more {
     margin: 0;
     height: 100vh;
-    background-image: url(../../Assets/eolia_background.png)
+    background-image: url(../../Assets/street6.png)
 }
 
 .lm-title {
@@ -32,13 +32,6 @@ body {
     gap: 1.5rem;
 }
 
-.lm-btn {
-    width: 50vw;
-    font-weight: bold;
-    border: 1px solid hsl(0 0% 100% / .1);
-    border-radius: 15px;
-}
-
 .icons {
     padding-bottom: 2.5rem;
     font-size: 1.5rem;
@@ -50,14 +43,18 @@ body {
     text-shadow: 0 0 .25em #222222, 0 0 .7em #D9D9D9;
 }
 
-.icon {
+.lm-btn {
+    width: 45vw;
+    padding-block: 1em;
+    font-weight: bold;
+    border: 1px solid hsl(0 0% 100% / .1);
     margin: .5rem;
-    background: hsl(0 0% 100% / .1);
-    backdrop-filter: blur(1rem);
-    border-radius: 10px;  
+    /* background: hsl(0 0% 100% / .1); */
+    background: hsla(166, 38%, 11%, 0.55);
+    backdrop-filter: blur(1rem)
 }
 
-.icon a {
+.lm-btn a {
     padding: .5rem;
 }
 

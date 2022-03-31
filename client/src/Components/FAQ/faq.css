@@ -1,0 +1,100 @@
+.faq {
+    width: 100vw;
+    margin: 0;
+    background: url(../../Assets/eolia_background.png);
+}
+
+.faq-title {
+    margin: 0;
+    color: #D9D9D9;
+    font-size: 3rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    text-shadow: 0 0 .25em #222222, 0 0 .25em yellow;
+}
+
+.main-faq {
+    width: 80%;
+    margin: auto;
+    margin-block: 2em;
+    text-align: center;
+    padding: 1em;
+    background: hsla(166, 38%, 11%, 0.55);
+    backdrop-filter: blur(1rem);
+    clip-path: polygon(100% 0, 100% 75%, 76% 100%, 0 100%, 0 7%, 25% 7%, 30% 0);
+}
+
+.faq-subtitle {
+    margin: 0;
+    color: #e0fdf3;
+    font-size: 1rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    letter-spacing: .05em;
+}
+
+.faqs-container {
+    display: flex;
+    flex-flow: row wrap;
+    padding-inline: .5em;
+}
+
+.faq-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 70%;
+    height: 50vh;
+    margin: auto;
+    text-align: center;
+    padding: 1em;
+    margin-block: 1em;
+    background: hsla(166, 38%, 11%, 0.55);
+    backdrop-filter: blur(1rem);
+    clip-path: polygon(100% 0, 100% 75%, 76% 100%, 0 100%, 0 7%, 25% 7%, 30% 0);
+}
+
+.faq-text {
+    font-size: .8rem;
+    letter-spacing: .05em;
+    color: #FFFFFF;
+}
+
+.faq-text a{
+    color: yellowgreen;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .faqs-container {
+        padding-inline: 1em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .faqs-container {
+        padding-inline: 2em;
+    }
+    
+    .main-faq {
+        width: 30%;
+        height: 45vh;
+    }
+
+    .faq-frame {
+        height: 45vh;
+        width: 30%;
+        margin-block: 2em;
+    }
+
+    .faq-title {
+        font-size: 4rem;
+        padding-top: 8rem;
+    }
+
+    .faq-text {
+        font-size: 1rem;
+        letter-spacing: .1em;
+    }
+}

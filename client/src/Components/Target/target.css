@@ -1,10 +1,10 @@
+
 .target {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    /* justify-content: space-around; */
     align-items: center;
     margin: 0; 
-    height: 100vh;
     background-image: url(../../Assets/eolia_background.png);
 }
 
@@ -12,27 +12,108 @@
     margin: 0;
     margin-bottom: 5rem;
     color: #D9D9D9;
+    text-align: center;
     font-size: 3rem;
-    padding-inline-start: 5rem;
     padding-top: 6rem;
     text-shadow: 0 0 .25em #222222, 0 0 .25em yellow;
+}
+
+.orangecar-container {
+    position: absolute;
+    top: 535%;
+    /* right: -111%; */
+}
+
+.orangecar {
+    width: 100vw;
 }
 
 .roadmap {
     display: flex;
     justify-content: center;
-    width: 50vw;
-}
-
-.rm-arrow {
-    color: #d9d9d9;
-    font-size: 3rem;
+    width: 80vw;  
 }
 
 .rm-text {
-    color: #d9d9d9;
+    border-left: 5px solid #FFFFFF;
+    padding: 2em;
+    color: #e0fdf3;
+    z-index: 10;
 }
 
 .rm-text h2 {
+    text-align: center;
     letter-spacing: 0.07em;
+}
+
+.text-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+}
+
+.text-section::before{
+    content: "";
+    position: absolute;
+    left: -51px;
+    top: 50%;
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    z-index: 10;
+}
+
+.text-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    list-style: none;
+}
+
+.text-section hr {
+    margin: 30px auto;
+    width: 50%;
+    border: 0px;
+    height: 1px;
+    background: linear-gradient(to right, rgba(46, 250, 250, 0), rgba(46, 250, 250, .75), rgba(46, 250, 250, 0));
+}
+
+@media screen and (min-width: 1024px) {
+    .target-title {
+        padding-top: 8rem;
+        font-size: 4rem;
+    }
+
+    .rm-text h2 {
+        font-size: 2rem;
+    }
+
+    .text-section::before{
+        width: 40px;
+        height: 40px;
+        left: -88px;
+        top: 50%;
+    }
+
+    .text-section h2 {
+        font-size: 3rem;
+    }
+
+    .text-section p {
+        font-size: 1.5rem;
+    }
+
+    .text-section ul {
+        font-size: 1.5rem;
+    }
+
+    .rm-text {
+        padding: 4em;
+    }
 }

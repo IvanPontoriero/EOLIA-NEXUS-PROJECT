@@ -1,4 +1,4 @@
-
+import Graffiti from '../../Assets/android.png'
 
 const WeAre = () => {
     return (
@@ -14,7 +14,10 @@ const WeAre = () => {
                             a paradise where art, sports and entertainment are common.
                         </p>
                     </div>
-                </div>   
+                </div>  
+                <div className='graffiti-container'>
+                    <img src={ Graffiti } alt='graffiti artist ilustration' className='graffiti' />    
+                </div> 
             </section>
             <div className='transition-bottom'></div>
         </div>

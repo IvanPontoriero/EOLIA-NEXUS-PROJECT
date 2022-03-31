@@ -19,9 +19,8 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const express = require('express');
 const app = express();
-const route = require('./routes/main'); // rutas
+const mainRoute = require('./routes/main'); // rutas
 const bodyParser = require('body-parser');
-const App = require('../client/src/App')
 // Creamos el puerto
 const PORT = process.env.PORT || 8080;
 
@@ -38,7 +37,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/', route)
+app.use('/', mainRoute)
 
 app.use((err, req, res, next) => {
     const status = err.status || 500;

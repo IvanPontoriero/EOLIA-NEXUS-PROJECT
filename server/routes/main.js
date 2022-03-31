@@ -1,9 +1,10 @@
 const { Router } = require('express')
-const App = require('../../client/src/App')
-const router = Router();
+const fs = require('fs')
+const path = require('path')
+const router = Router()
 
-router.get('/', (req, res) => {
-    res.render(App);
+router.get('^/$', (req, res, next) => {
+    
 });
 
 module.exports = router;
