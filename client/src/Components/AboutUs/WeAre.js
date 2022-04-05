@@ -3,15 +3,16 @@ import Graffiti from '../../Assets/android.png'
 const WeAre = () => {
     return (
         <div className='about-us2'>
+            <h1 className='au-title'>"LORE"</h1>
             <section className='au-section right'>
                 <div className='text-bg2'>
                     <div className='text2-container'>
                         <p class='au-text2'>
-                            .Eolia is the vestige of what our civilization once was. 
-                            A small paradise saved by the vision of former businessmen who knew 
-                            how to listen to the astronomers warnings and acted on time. A cultural 
-                            Eden, which was developed to be the living record of what we once were, 
-                            a paradise where art, sports and entertainment are common.
+                            Eolia is the vestige of a lost civilization. A small paradise 
+                            saved by the vision of former businessmen who knew how to listen 
+                            to the astronomers warnings and acted on time. A cultural Eden, 
+                            which was developed to be the living record of what we once were, 
+                            a sky where art and culture thrive in every corner.
                         </p>
                     </div>
                 </div>  

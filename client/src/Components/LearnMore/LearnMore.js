@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Carousel2 from '../Carousel/Carousel2'
 import './learnmore.css';
 
 const LearnMore = () => {

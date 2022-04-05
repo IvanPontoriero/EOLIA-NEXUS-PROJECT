@@ -1,9 +1,4 @@
-import { GiAlienStare } from 'react-icons/gi'
-import { GiDeathStar } from 'react-icons/gi'
-import { GiSpaceSuit } from 'react-icons/gi'
-import { GiSpaceship } from 'react-icons/gi'
 import Logo from '../../Assets/logo.png';
-import { GiAbstract015 } from 'react-icons/gi'
 import { Link } from 'react-router-dom';
 
 const Members = () => {
