@@ -21,32 +21,28 @@ const Navbar = () => {
             <nav className='navbar'>
                 <img src={ Logo } alt='eolia nexus logo' className='logo rotating'/>
                 <ul id='primary-navigation' data-visible='false' className={isMobile ? 'primary-navigation flex mobile' : 'primary-navigation flex'} onClick={() => setIsMobile(true)}>
-                    {/* <li>
-                        <Link activeClass="active" to="home-page" spy={true} 
-                        smooth={true} offset={0} duration={500} >
-                            <span aria-hidden='true'>00 </span>
-                                HOME
-                        </Link>
-                    </li> */}
                     <li>
                         <Link activeClass="active" to="about-us" spy={true} 
                         smooth={true} offset={0} duration={500}>
-                            <span aria-hidden='true'>01 </span>
-                                ABOUT US
+                            ABOUT US
+                        </Link>
+                    </li>
+                    <li>
+                        <Link activeClass="active" to="utility" spy={true} 
+                        smooth={true} offset={0} duration={500} >
+                            UTILITY
                         </Link>
                     </li>
                     <li>
                         <Link activeClass="active" to="roadmap" spy={true} 
                         smooth={true} offset={0} duration={500}>
-                            <span aria-hidden='true'>02 </span>
-                                ROADMAP
+                            ROADMAP
                         </Link>
                     </li>
                     <li>
                         <Link activeClass="active" to="faq" spy={true} 
                         smooth={true} offset={0} duration={500}>
-                            <span aria-hidden='true'>03 </span>
-                                F.A.Q.
+                            F.A.Q.
                         </Link>
                     </li>
                     <li>
@@ -55,8 +51,7 @@ const Navbar = () => {
                         href="https://drive.google.com/file/d/1fakyuk40qIJyoOtIbXMp7piUOrBqbUNY/view?usp=sharing" spy={true} 
                         smooth={true} 
                         target='_blank'>
-                            <span aria-hidden='true'>04 </span>
-                                WHITEPAPER
+                            WHITEPAPER
                         </a>
                     </li>
                 </ul>

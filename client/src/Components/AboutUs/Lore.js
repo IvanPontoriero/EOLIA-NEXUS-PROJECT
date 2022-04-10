@@ -3,7 +3,7 @@ import Graffiti from '../../Assets/android.png'
 const WeAre = () => {
     return (
         <div className='about-us2'>
-            <h1 className='au-title2'>"LORE"</h1>
+            <h1 className='au-title2'>LORE</h1>
             <section className='au-section right'>
                 <div className='text-bg2'>
                     <div className='text2-container'>

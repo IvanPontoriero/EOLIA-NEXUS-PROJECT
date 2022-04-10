@@ -3,7 +3,7 @@ import './utility.css'
 
 const Utility = () => {
     return(
-        <div className='utility-container'>
+        <div className='utility-container' id='utility'>
             <h1 className='lm-title'>Upcoming Token's Utility Overview</h1>
             <div className='utility'>
                 <div className='utility-section'>                 
