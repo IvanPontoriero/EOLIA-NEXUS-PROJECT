@@ -1,0 +1,15 @@
+.slider-container {
+    background-image: url(../../Assets/eolia_background.png)
+}
+
+
+.arrow {
+    font-size: 3rem;
+    text-shadow: 0 0 1em #D9D9D9;
+}
+
+@media screen and (min-width: 1024px) {
+    .arrow {
+        padding-inline: 2em;
+    }
+}

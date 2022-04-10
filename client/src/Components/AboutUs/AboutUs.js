@@ -1,13 +1,15 @@
 import RobotBug from '../../Assets/robot-bug.png';
-import PurpleCar from '../../Assets/purple-car.png';
 import Members from './Members';
-import WeAre from './WeAre';
+import Lore from './Lore';
+import './aboutus.css';
 
 const AboutUs = () => {
     return(
         <div className='about-us' id='about-us'>
             <div className='transition'></div>
-            <h1 className='au-title'>"THE EOLIA NEXUS PROJECT"</h1>
+            <div className='title-container'>
+                <h1 className='au-title'>THE EOLIA NEXUS PROJECT</h1>
+            </div>
             <section className='au-section'>
                 <div className='text-bg'>
                     <p class='au-text'>
@@ -20,15 +22,15 @@ const AboutUs = () => {
                 <div className='robotbug-container'>
                     <img src={ RobotBug } alt='robot bug ilustration' className='robotbug'/>    
                 </div>
-                <div className='purplecar-container'>
+                {/* <div className='purplecar-container'>
                     <img src={ PurpleCar } alt='purple car ilustration' className='purplecar'/>    
-                </div>
+                </div> */}
             </section>
             <span>
                 <div className='middle-transition-bottom'></div>
                 <div className='middle-transition-top'></div>
             </span>
-            <WeAre />
+            <Lore />
         </div>
     )
 };

@@ -4,6 +4,7 @@ import Countdown from './Countdown';
 import Logo from '../../Assets/logo.png';
 import { IoIosArrowDown } from 'react-icons/io';
 import { Link } from 'react-scroll';
+import './main.css';
 
 const Main = () => {
 

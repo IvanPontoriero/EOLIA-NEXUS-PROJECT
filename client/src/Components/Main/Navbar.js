@@ -50,11 +50,14 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link activeClass="active" to="learn-more" spy={true} 
-                        smooth={true} offset={0} duration={500}>
+                        <a 
+                        activeClass="active" 
+                        href="https://drive.google.com/file/d/1fakyuk40qIJyoOtIbXMp7piUOrBqbUNY/view?usp=sharing" spy={true} 
+                        smooth={true} 
+                        target='_blank'>
                             <span aria-hidden='true'>04 </span>
-                                LEARN MORE
-                        </Link>
+                                WHITEPAPER
+                        </a>
                     </li>
                 </ul>
             </nav>

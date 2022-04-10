@@ -1,14 +1,14 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter as Router} from 'react-router-dom';
+import "uikit/dist/css/uikit.min.css";
+import "uikit/dist/js/uikit.min.js"; 
 import Main from './Components/Main/Main';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Target from './Components/Roadmap/Target';
 import FAQ from './Components/FAQ/FAQ';
 import LearnMore from './Components/LearnMore/LearnMore';
-import Carousel2 from './Components/Carousel/Carousel2';
-import './Components/Main/main.css';
-import './Components/AboutUs/aboutus.css';
+import Utility from './Components/Utility/Utility'
+import Carousel from './Components/Carousel/Carousel'
 
 function App() {
   return (
@@ -16,8 +16,9 @@ function App() {
       <Main />
       <ScrollToTop />
       <AboutUs />
+      <Utility />
       <Target />
-      <Carousel2 />
+      <Carousel />
       <FAQ />
       <LearnMore />
     </Router>      

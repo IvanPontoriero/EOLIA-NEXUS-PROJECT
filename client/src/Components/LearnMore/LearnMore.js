@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
-import Carousel2 from '../Carousel/Carousel2'
 import './learnmore.css';
 
 const LearnMore = () => {
     return (
         <section className='learn-more' id='learn-more'>
-            <div className='transition'></div>
+            <div className='transition-lm'></div>
             <h1 className='lm-title'>LEARN MORE</h1>
             <div className='lm-container icons'>
                 <button className='lm-btn '>
