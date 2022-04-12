@@ -17,7 +17,7 @@ const FAQ = () => {
             <div className='faqs-container'>
                 <div className='faq-frame'>
                     <h2 className='faq-subtitle'>
-                        WHEN WILL MINTING STARTING?    
+                        WHEN WILL MINTING START?    
                     </h2>
                     <p className='faq-text'>
                         The mint will be available at the time indicated by the countdown.    
@@ -60,10 +60,10 @@ const FAQ = () => {
                         ARE THERE ANY ROYALTIES ON SECONDARY SALES?   
                     </h2>
                     <p className='faq-text'>
-                        All secondary market trades will have a 3% royalty.<br/>
-                        Which will be divided in three equal parts:<br/>
-                        1% redistributed among founding stone's holders at the end of the quarter.<br/>
-                        1% to creators.<br/>
+                        All secondary market trades will have a 4% royalty.<br/>
+                        Which will be divided in three parts:<br/>
+                        2% redistributed among founding stone's holders at the end of the quarter..<br/>
+                        1% will be evenly distributed among holders of the original colletibles and the Major Prize<br/>
                         1% to a prize pool, distributed quarterly among 10 random holders.<br/>
                     </p>
                 </div>

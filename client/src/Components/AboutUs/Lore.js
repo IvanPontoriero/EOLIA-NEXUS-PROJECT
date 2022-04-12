@@ -12,7 +12,7 @@ const WeAre = () => {
                             saved by the vision of former businessmen who knew how to listen 
                             to the astronomers warnings and acted on time. A cultural Eden, 
                             which was developed to be the living record of what we once were, 
-                            a sky where art and culture thrive in every corner.
+                            an island where art and culture thrive in every corner.
                         </p>
                     </div>
                 </div>  

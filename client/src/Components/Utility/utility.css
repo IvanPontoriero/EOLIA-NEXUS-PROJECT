@@ -68,7 +68,7 @@
 
     .humanoid-container {
         position: absolute;
-        top: 450%;
+        top: 500%;
         left: -4rem;
         transform: scale(0.7);
         z-index: 0;
@@ -111,6 +111,6 @@
 
     .humanoid-container {
         left: 0%;
-        top: 480%;
+        top: 500%;
     }
 }

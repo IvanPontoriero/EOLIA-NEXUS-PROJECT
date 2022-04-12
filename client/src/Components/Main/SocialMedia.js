@@ -8,19 +8,19 @@ const SocialMedia = () => {
         <div className='social-media'>
             <ul className='icons column'>
                 <li className='icon'>
-                    <Link to={{ pathname: "https://discord.gg/kpFYAB2Q" }} target="_blank">
+                    <a href="https://discord.gg/TwGJasHq"target="_blank">
                         <FaDiscord />
-                    </Link>
+                    </a>
                 </li>
                 <li className='icon'>
-                    <Link to={{ pathname: "https://twitter.com/EoliaNexus?t=43I5_glpP2V-W1Z1RYYIXw&s=08" }} target="_blank">
+                    <a href="https://twitter.com/EoliaNexus?t=43I5_glpP2V-W1Z1RYYIXw&s=08"target="_blank">
                         <FaTwitter />
-                    </Link>
+                    </a>
                 </li>
                 <li className='icon'>
-                    <Link to={{ pathname: "https://twitter.com/EoliaNexus?t=43I5_glpP2V-W1Z1RYYIXw&s=08" }} target="_blank">
+                    <a href="https://instagram.com/eolianexus_pr?igshid=YmMyMTA2M2Y=" target="_blank">
                         <FaInstagram />
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </div>

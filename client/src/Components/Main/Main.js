@@ -14,7 +14,7 @@ const Main = () => {
             <div className='home-content'>
                 <div className='main-content'>
                     <SocialMedia />
-                    <Countdown  countdownTimestampMs={1649999999999}/>
+                    <Countdown  countdownTimestampMs={1652324400000}/>
                     <div className='island-container'>
                         <img src={ Logo } alt='eolia nexus logo' className='island'/>    
                     </div>

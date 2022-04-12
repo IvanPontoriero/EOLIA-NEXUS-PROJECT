@@ -11,7 +11,7 @@ const Roadmap = () => {
                         <hr/>
                         <h3>"The Founding Stones"</h3>
                         <p>
-                            The *Founding Stones* a collection of 1000 equivalent NFTs will be minted to collect initial money 
+                            The "Founding Stones" a collection of 1000 equivalent NFTs will be minted to collect initial money 
                             to start the project. These tokens will allow owners to receive rewards in SOL as th project achieves its future goals.
                         </p>
                         <hr/>
@@ -19,7 +19,7 @@ const Roadmap = () => {
                         <p>
                             A collection of 119 tokens, each representing one element of the periodic table, will be realesed. 
                             These tokens will be related to one another by a collecting system, that will incentivize users to trade
-                            and collect them in pursuit of different przes, awarded in the form of NFTs that will entitle the owners 
+                            and collect them in pursuit of different prizes, awarded in the form of NFTs that will entitle the owners 
                             to receive multiple perks and rewards in the future.
                         </p>
                         <hr/>
@@ -43,7 +43,7 @@ const Roadmap = () => {
                             collectionability dynamics as the first one.
                         </p>
                         <hr/>
-                        <h3>"Pre Opening Event"</h3>
+                        <h3>"Showcase"</h3>
                         <p>
                             A similar event to that of the first demo will be hosted in the Eolia Virtual Museum, this event will expand the art collection, 
                             showkase new functionalities, and it will demonstrate the effective scalability of the project's architecture
