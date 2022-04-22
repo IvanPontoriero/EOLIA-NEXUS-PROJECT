@@ -1,0 +1,656 @@
+// 1. Your custom variables and variable overwrites.
+
+// Background:
+$global-primary-background:						 #02EEB5;
+$global-secondary-background:					 #0B1425;
+$global-muted-background:                        #989898;
+$global-default-background:                      #060c18;
+$global-background:                              $global-secondary-background;
+
+// Colors
+$global-color:                                   #000 !default;
+$global-emphasis-color:                          $global-color !default;
+$global-muted-color:                             #999 !default;
+$global-border-color:							 rgba($global-muted-background, 0.5);
+
+$global-link-color:                              $global-primary-background;
+$global-link-hover-color:                        rgba($global-primary-background, 0.7);
+
+$global-inverse-color:                           #fff !default;
+$inverse-global-color:                           rgba(255,255,255,0.8);
+$inverse-global-muted-color:                     rgba(255,255,255,0.5);
+
+$backdrop-filter: 								 blur(10px);
+
+// Used in grid, column, container, align, card, padding
+$global-gutter:                                  30px !default;
+$global-small-gutter:                            15px !default;
+$global-medium-gutter:                           40px !default;
+$global-large-gutter:                            70px !default;
+
+// Font
+$global-font-size:                               16px !default;
+$global-font-family:                             'Montserrat', sans-serif;
+$base-heading-font-family:                       'Orbitron', sans-serif;
+$base-body-font-weight:							 400;
+$base-strong-font-weight:                        600;
+$base-heading-font-weight:                       600;
+
+// Progress
+$progress-background:                            rgba($global-inverse-color,0.1);
+$progress-bar-background:						 $global-inverse-color;
+
+// Radius
+$global-radius:                     			 0;
+
+// Navbar
+$navbar-background:								 rgba($global-background,0.8);
+$navbar-dropdown-background:				     $global-inverse-color;
+$navbar-nav-item-color:                          $global-color;
+
+// Buttons
+$button-default-color:                           $global-primary-background;
+$button-default-hover-color:                     $global-primary-background;
+$button-default-active-color:                    $global-primary-background;
+
+$button-default-border:                          $global-primary-background;
+$button-default-hover-border:                    $global-primary-background;
+$button-default-active-border:                   $global-primary-background;
+
+$inverse-button-text-color:                      $global-primary-background;
+$inverse-button-text-hover-color:                $global-primary-background;
+$button-text-color:                        		 $global-primary-background;
+
+// Card
+$card-default-background:						 $global-default-background;
+$card-default-color:						 	 $global-inverse-color;
+
+// Form
+$form-background: 								$global-inverse-color;
+$form-border-width:								0;
+
+// Countdown
+$countdown-number-line-height:                   0.9 !default;
+$countdown-number-font-size:                     2rem !default; // 32px
+$countdown-number-font-size-s:                   3rem !default; // 64px
+$countdown-number-font-size-m:                   5rem !default; // 96px
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Orbitron:wght@600&display=swap');
+
+// 2. Import default variables and available mixins.
+@import "../../node_modules/uikit/src/scss/variables-theme.scss";
+@import "../../node_modules/uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+
+// 4. Import UIkit.
+@import "../../node_modules/uikit/src/scss/uikit-theme.scss";
+
+
+// Animations
+@keyframes uk-kenburns-curve {
+	0% { transform: scale(0.9) rotate(5deg); }
+	50% { transform: scale(1.1) rotate(10deg); }
+	100% { transform: scale(0.9) rotate(5deg); }
+}
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	opacity: 0
+}
+
+html {
+	background: rgb(42,60,119);
+	background: linear-gradient(0deg, rgba(42,60,119,1) 8%, rgba(11,20,37,1) 22%, rgba(11,20,37,1) 59%, rgba(0,0,0,1) 100%);
+}
+#default {
+	background-image: url('~/assets/img/stars.png');
+}
+
+// Button
+.uk-button {
+	font-family: $base-heading-font-family;
+	&.uk-button-primary {
+		border: 1px solid $global-primary-background;
+		border-left: 0;
+		border-right: 0;
+		background-color: transparent !important;
+		color: $global-primary-background !important;
+		letter-spacing: 1px;
+		transition: linear .2s;
+		text-shadow: 0 0 20px $global-primary-background;
+		&:hover {
+			border: 1px solid $global-primary-background;
+			letter-spacing: 3px;
+			text-shadow: 0 0 20px $global-primary-background;
+			box-shadow: inset 0 0 20px rgba($global-primary-background, 0.5), 0 0 20px rgba($global-primary-background, 0.5);
+		}
+	}
+	&.uk-button-large {
+		font-size: 1rem;
+	}
+}
+
+// Form
+.uk-input,
+.uk-select,
+.uk-textarea,
+.uk-radio,
+.uk-checkbox {
+	border: 1px solid transparent;
+}
+.uk-input:focus,
+.uk-select:focus,
+.uk-textarea:focus {
+	border: 1px solid $global-primary-background !important;
+	box-shadow: 0 0 5px rgba($global-primary-background, 0.5);
+}
+textarea {
+	resize: none;
+}
+
+// Cards
+.uk-card {
+	&.uk-card-eolia {
+		h2 {
+			color: $global-primary-background !important;
+		}
+		border: solid 1px $global-primary-background;
+		background-color: rgba(0,0,0,0.4);
+		backdrop-filter: $backdrop-filter;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: -14px;
+			left: -7px;
+			background-image: url('@/assets/img/card-eolia-frame.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			@media (min-width: $breakpoint-medium) {
+				top: -24px;
+				left: -13px;
+			}
+		}
+	}
+}
+
+// Text
+.uk-title-glow {
+	color: $global-primary-background !important;
+	text-shadow: 0 0 20px $global-primary-background;
+}
+.uk-h1 {
+	@media (max-width: $breakpoint-medium) {
+		font-size: 2rem;
+	}
+}
+
+// Sections
+
+.uk-section-separator {
+	border: solid 2px $global-primary-background;
+	border-left: 0;
+	border-right: 0;
+	position: relative;
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: 9;
+		width: 100px;
+		height: 0;
+		margin: auto;
+		top: -15px;
+		left: 0;
+		right: 0;
+		border-right: 15px solid transparent;
+		border-left: 15px solid transparent;
+		border-bottom: 15px solid $global-primary-background;
+		@media (min-width: $breakpoint-medium) {
+			width: 500px;
+		}
+	}
+	&:after {
+		top: unset;
+		bottom: -15px;
+		border-top: 15px solid $global-primary-background;
+		border-bottom: 0;
+	}
+}
+
+
+// COMPONENTS
+//----------------------------------------------//
+
+// Navbar
+.uk-navbar-nav > li > a,    // Nav item
+.uk-nav > li > a,
+.uk-navbar-item,            // Content item
+.uk-navbar-toggle {         // Clickable item
+	font-weight: $base-strong-font-weight;
+	color: $global-inverse-color !important;
+}
+.uk-light .uk-navbar-nav > li.uk-active > a {
+	color: $global-primary-background !important;
+}
+.uk-navbar-sticky {
+	.uk-navbar-nav > li > a,
+	.uk-navbar-item, .uk-navbar-toggle {
+		//min-height: 60px;
+	}
+}
+
+.uk-nav {
+	z-index: 1;
+	.uk-offcanvas-close {
+		position: inherit;
+		z-index: inherit;
+		top: inherit;
+		right: inherit;
+		padding: 5px 0;
+	}
+}
+
+#MainNav {
+	z-index: 1;
+	&.uk-navbar-container {
+		box-shadow: 0 5px 15px rgba(#060606, 0.8);
+		backdrop-filter: blur(5px);
+		&.uk-navbar-transparent {
+			//background: rgba($global-background, 0.7);
+
+		}
+	}
+}
+
+.nav-float {
+	&.socialnav {
+		margin-left: 10px;
+		position: absolute;
+		margin-top: calc(100vh - 70vh);
+		z-index: 999;
+		@media (min-width: $breakpoint-medium) {
+			margin-left: 15px;
+		}
+		@media (min-width: $breakpoint-xlarge) {
+			margin-left: 40px;
+		}
+		li {
+			+ li {
+				margin-top: 10px;
+			}
+			a {
+				box-sizing: border-box;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 0;
+				cursor: pointer;
+				transition: all .2s;
+			}
+		}
+	}
+}
+
+// Logo
+.uk-logo {
+	text-shadow: 0 0 10px #fff;
+	img {
+		margin-right: 10px;
+	}
+}
+.rotating {
+	animation: rotation 2.5s infinite linear;
+}
+
+@keyframes rotation {
+	from {
+		-webkit-transform: rotateY(0deg);
+	}
+	to {
+		-webkit-transform: rotateY(359deg);
+	}
+}
+.floating {
+	animation: floating 2.5s infinite ease;
+}
+
+@keyframes floating {
+	0% { transform: translateY(-3px); }
+	50% { transform: translateY(3px); }
+	100% { transform: translateY(-3px); }
+}
+
+// Modal
+.uk-modal {
+	backdrop-filter: $backdrop-filter;
+	.uk-modal-dialog {
+	}
+}
+
+// HOME
+//----------------------------------------------//
+#Home {
+	
+}
+#Hero {
+	background-image: url('@/assets/img/bg-dome.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	&.uk-height-viewport {
+		min-height: calc(100vh - 150px) !important;
+	}
+}
+
+#Countdown {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-left: 20px;
+	margin-right: 20px;
+	.count-bg {
+		position: absolute;
+	}
+	.uk-countdown {
+		font-family: $base-heading-font-family;
+		//color: $global-primary-background;
+		text-shadow: 0 0 20px $global-primary-background;
+		z-index: 1;
+		.uk-countdown-seconds {
+			span {
+				@media (min-width: $breakpoint-medium) {
+					width: 66px !important;
+					display: inline-block;
+					text-align: center;
+				}
+			}
+		}
+	}
+	.uk-grid-small > *, .uk-grid-column-small > * {
+		@media (max-width: $breakpoint-small) {
+			padding-left: 5px;
+		}
+	}
+}
+
+#About {
+	background-image: url('@/assets/img/bg-neo.jpg');
+	background-size: cover;
+	background-position: center;
+	.uk-height-viewport {
+		min-height: calc(100vh - 200px) !important;
+		@media (min-width: $breakpoint-medium) {
+			min-height: calc(100vh - 300px) !important;
+		}
+	}
+}
+
+#Utility {
+	h3 {
+		font-family: $global-font-family;
+	}
+}
+
+#Lore {
+	background-image: url('@/assets/img/bg-greek.jpg');
+	background-size: cover;
+	background-position: center;
+	.uk-height-viewport {
+		min-height: calc(100vh - 200px) !important;
+		@media (min-width: $breakpoint-medium) {
+			min-height: calc(100vh - 300px) !important;
+		}
+	}
+}
+
+#Gallery {
+	.gallery-frame {
+		border: solid 2px #fff;
+		border-top: 0;
+		box-shadow: inset 0 0 15px $global-primary-background, 0 0 15px $global-primary-background;
+		@media (min-width: $breakpoint-medium) {
+			width: 70%;
+			padding-bottom: 60px;
+		}
+	}
+}
+
+#Roadmap {
+	width: 100%;
+	overflow: hidden;
+	#roadslide {
+		li {
+			.phase-title {
+				padding-left: 35px;
+				min-height: 56px;
+				text-align: left;
+				@media (min-width: $breakpoint-medium) {
+					padding-left: 50px;
+				}
+				@media (min-width: $breakpoint-xlarge) {
+					padding-left: 110px;
+				}
+
+				&:before {
+					content: "";
+					position: absolute;
+					width: 8px;
+					height: 56px;
+					left: 10px;
+					background-color: $global-primary-background;
+					box-shadow: 0 0 10px $global-primary-background;
+					@media (min-width: $breakpoint-medium) {
+						left: 30px;
+					}
+					@media (min-width: $breakpoint-xlarge) {
+						left: 90px;
+					}
+				}
+			}
+			&:not(:first-child) {
+				.phase-title {
+					&:before {
+						content: none;
+					}
+				}
+			}
+			&:before {
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 1px;
+				top: 55%;
+				right: -25px;
+				background-color: $global-primary-background;
+				box-shadow: 0 0 10px $global-primary-background;
+				@media (min-width: $breakpoint-medium) {
+					width: 80px;
+					right: -40px;
+				}
+				@media (min-width: $breakpoint-xlarge) {
+					width: 200px;
+					right: -100px;
+				}
+			}
+			
+			&.phase-2 {
+				&:before {
+					background-color: #FF0660;
+				}
+				.phase-title {
+					&:before {
+						content: "";
+						background-color: #FF0660;
+						box-shadow: 0 0 10px #FF0660;
+					}
+				}
+				.uk-card {
+					border-color: #FF0660;
+					box-shadow: inset 0 0 10px rgba(#FF0660, 0.3), 0 0 10px rgba(#FF0660, 0.3);
+					img {
+						filter: drop-shadow(0 0 10px #FF0660);
+					}
+				}
+			}
+			&.phase-3 {
+				&:before {
+					background-color: #00E0FF;
+				}
+				.phase-title {
+					&:before {
+						content: "";
+						background-color: #00E0FF;
+						box-shadow: 0 0 10px #00E0FF;
+					}
+				}
+				.uk-card {
+					border-color: #00E0FF;
+					box-shadow: inset 0 0 10px rgba(#00E0FF, 0.3), 0 0 10px rgba(#00E0FF, 0.3);
+					.frame-top {
+						filter: drop-shadow(0 0 10px #00E0FF);
+					}
+					.frame-bottom {
+						filter: drop-shadow(0 0 10px #00E0FF);
+					}
+				}
+			}
+		}
+		.uk-card {
+			margin-left: 25px;
+			margin-right: 25px;
+			min-height: 186px;
+			border: solid 1px $global-primary-background;
+			box-shadow: inset 0 0 10px rgba($global-primary-background, 0.3), 0 0 10px rgba($global-primary-background, 0.3);
+			position: relative;
+			background-color: rgba(#000, 0.4);
+			@media (min-width: $breakpoint-medium) {
+				margin-left: 40px;
+				margin-right: 40px;
+			}
+			@media (min-width: $breakpoint-xlarge) {
+				margin-left: 100px;
+				margin-right: 100px;
+			}
+			h3 {
+				font-family: $global-font-family;
+				font-weight: 500;
+			}
+
+			.frame-top {
+				position: absolute;
+				width: 250px;
+				top: -11px;
+				left: -11px;
+				filter: drop-shadow(0 0 10px $global-primary-background);
+			}
+			.frame-bottom {
+				position: absolute;
+				width: 150px;
+				right: -15px;
+				bottom: -15px;
+				filter: drop-shadow(0 0 10px $global-primary-background);
+			}
+		}
+
+	}
+}
+.uk-slidenav {
+	padding: 5px;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	background-color: $global-primary-background;
+	border-radius: 100px;
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.7;
+	transition: linear .2s;
+	svg {
+		transform: scale(0.7);
+		polyline {
+			stroke: #000 !important;
+		}
+	}
+	@media (min-width: $breakpoint-medium) {
+		width: 20px;
+		height: 20px;
+		svg {
+			transform: scale(0.9);
+		}
+	}
+	@media (min-width: $breakpoint-xlarge) {
+		width: 30px;
+		height: 30px;
+	}
+	&:hover {
+		opacity: 1;
+		transform: translate(0, var(--uk-position-translate-y)) scale(1.15);
+	}
+}
+
+#FAQ {
+	.uk-accordion-title {
+		padding: 20px;
+		color: $global-secondary-background;
+		font-family: $base-heading-font-family;
+		background-color: $global-primary-background;
+		@media (max-width: $breakpoint-medium) {
+			font-size: 1.1rem;
+		}
+		&:before {
+			filter: invert(1);
+		}
+	}
+	.uk-accordion-content {
+		margin-top: 0;
+		padding: 20px;
+		background-color: rgba($global-primary-background, 0.2);
+		backdrop-filter: blur(5px);
+	}
+}
+
+#Contact {
+}
+.totop {
+	right: 20px;
+	bottom: 20px;
+	z-index: 99;
+	img {
+		transition: linear .2s;
+	}
+	&:hover {
+		text-decoration: none;
+		img {
+			animation: pepe .6s ease;
+		}
+	}
+}
+@keyframes pepe {
+	0% { transform: translateY(0); }
+	25% { transform: translateY(-5px); }
+	50% { transform: translateY(0); }
+	75% { transform: translateY(-5px); }
+	100% { transform: translateY(0); }
+}
+
+// Footer
+//----------------------------------------------//
+#MainFooter {}
+.uk-logo {
+	font-family: $base-heading-font-family;
+}
+.uk-social-icon {
+	img {
+		width: 25px;
+		//filter: invert(1);
+	}
+}
