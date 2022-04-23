@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<transition name="fade" mode="out-in">
-			<div v-if="sent" class="uk-text-center">
+			<div v-if="sent" class="uk-text-center uk-margin-large-top">
 				<h3>Thank you for your message</h3>
 				<p>We will contact you soon</p>
 			</div>

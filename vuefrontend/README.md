@@ -1,4 +1,6 @@
-# frontend
+# Eolia Nexus - Landing page
+
+Develop by [Yael Duckwen](https://github.com/yaeru) for Eolia Nexus.
 
 ## Build Setup
 

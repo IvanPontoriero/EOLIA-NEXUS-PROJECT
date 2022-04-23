@@ -1,7 +1,7 @@
 export default {
   router: {
     //mode: 'hash',
-    base: '/demo/'
+    //base: '/demo/'
   },
 
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -44,7 +44,7 @@ export default {
     {
       hid: 'og:url',
       property: 'og:url',
-      content: 'https://eolianexus.com/',
+      content: 'https://eolianexus.com',
     },
     {
       hid: 'og:image',
@@ -72,11 +72,12 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-  ],
+  buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+  '@nuxtjs/axios',
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

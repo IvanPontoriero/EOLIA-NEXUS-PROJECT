@@ -3,6 +3,5 @@
 		<MainNav />
 		<SocialFloat />
 		<Nuxt />
-		<MainFooter />
 	</div>
 </template>

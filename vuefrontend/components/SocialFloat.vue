@@ -12,7 +12,7 @@
 				</a>
 			</li>			
 			<li>
-				<a href="https://discord.gg/MdC9HsF3XZ" target="_blank" rel="noopener">
+				<a href="https://discord.gg/VKjJSxd3nE" target="_blank" rel="noopener">
 					<img src="@/assets/img/social/box-discord.svg" alt="discord" width="80">
 				</a>
 			</li>

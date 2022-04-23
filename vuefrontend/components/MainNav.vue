@@ -31,7 +31,7 @@
 						<a href="#FAQ" uk-scroll>FAQ</a>
 					</li>
 					<li>
-						<a href="#Contact" uk-scroll>Contact</a>
+						<a href="#Contact" uk-scroll>Learn More</a>
 					</li>
 					<li>
 						<a href="https://drive.google.com/file/d/18UteTni3cVPRSYtPmGYPJoz7coW_WhoU/edit" target="_blank" rel="noopener">Whitepaper</a>

@@ -51,7 +51,7 @@
 					phase1: true,
 					phaseClass: 'phase-1',
 					title: 'The First Collection',
-					answer: 'A collection of 119 tokens, each representing one element of the periodic table will be released.',
+					answer: 'A collection of 118 tokens, each representing one element of the periodic table will be released.',
 				},
 				{
 					id: 2,

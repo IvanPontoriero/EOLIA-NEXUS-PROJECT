@@ -396,6 +396,9 @@ textarea {
 	h3 {
 		font-family: $global-font-family;
 	}
+	@media (max-width: $breakpoint-medium) {
+		text-align: center;
+	}
 }
 
 #Lore {
@@ -619,6 +622,17 @@ textarea {
 }
 
 #Contact {
+	padding-bottom: 200px;
+	background-image: url('~/assets/img/sunset.webp');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+	@media (min-width: $breakpoint-medium) {
+		padding-bottom: 400px;
+	}
+	@media (min-width: $breakpoint-xlarge) {
+		padding-bottom: 700px;
+	}
 }
 .totop {
 	right: 20px;
@@ -626,15 +640,19 @@ textarea {
 	z-index: 99;
 	img {
 		transition: linear .2s;
+		width: 100px;
+		@media (min-width: $breakpoint-large) {
+			width: 120px;
+		}
 	}
 	&:hover {
 		text-decoration: none;
 		img {
-			animation: pepe .6s ease;
+			animation: topbounce .6s ease;
 		}
 	}
 }
-@keyframes pepe {
+@keyframes topbounce {
 	0% { transform: translateY(0); }
 	25% { transform: translateY(-5px); }
 	50% { transform: translateY(0); }
@@ -650,7 +668,7 @@ textarea {
 }
 .uk-social-icon {
 	img {
-		width: 25px;
+		width: 40px;
 		//filter: invert(1);
 	}
 }

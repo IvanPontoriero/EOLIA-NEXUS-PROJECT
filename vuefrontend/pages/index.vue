@@ -123,7 +123,7 @@
     <section id="Contact" class="uk-section uk-section-large uk-text-center">
       <div class="uk-container">
         <h2 class="uk-text-center uk-title-glow uk-h1 uk-margin-large-bottom">
-          Contact Us
+          Learn More
         </h2>
         <div class="uk-width-2-3@m uk-align-center uk-margin-large-bottom">
           <div class="uk-grid uk-child-width-1-2@m" uk-grid>
@@ -133,11 +133,14 @@
               </a>
             </div>
             <div>
-              <a href="#" class="uk-button uk-button-primary uk-button-large">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkG1M4GB_MMcHPPIyU2sLlmupI15zLWTEN9IXflhlxqyCLUA/viewform?vc=0&c=0&w=1&flr=0" target="_blank" rel="noopener" class="uk-button uk-button-primary uk-button-large">
                 Join the Team
               </a>
             </div>
           </div>
+
+          <SocialNav />
+          
           <FormContact />
         </div>
       </div>
@@ -156,12 +159,12 @@
       return {
         script: [
         {
-          src: "https://www.googletagmanager.com/gtag/js?id=G-WCGRX24G2Q",
+          src: "https://www.googletagmanager.com/gtag/js?id=G-550Z48E2EN",
           async: true,
         },
         {
           type:'text/javascript',
-          innerHTML: "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-WCGRX24G2Q');",
+          innerHTML: "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-550Z48E2EN');",
         }
         ]
       }
